@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont2" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont2"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="Eye" unicode="&#58883;" d="M512 158.08a32 32 0 0 0-32 32V360.747a32 32 0 0 0 64 0V190.08a32 32 0 0 0-32-32z m247.467 72.107a32 32 0 0 0-22.614 9.386L616.107 360.32a32 32 0 0 0 45.226 45.013L782.08 284.587a32 32 0 0 0-22.613-54.614z m-495.36-0.427a32 32 0 0 0-22.614 54.613l121.174 120.96a32 32 0 0 0 45.226-45.226L287.147 239.36a32 32 0 0 0-23.04-9.6zM512 330.667c-235.947 0-421.973 215.466-429.653 224a32 32 0 0 0 48.64 42.666c1.706-1.92 174.933-202.026 381.013-202.026s379.307 199.466 381.013 202.026a32 32 0 0 0 48.64-42.666c-7.68-8.534-193.706-224-429.653-224z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>
