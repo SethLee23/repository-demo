@@ -25,7 +25,7 @@ var pollApis = ['getLiveCount', 'touristsmsg']
  */
 service.interceptors.request.use(config => {
     // 非轮询接口展示loading
-    if (pollApis.indexOf(config.url)==-1) {
+    if (pollApis.indexOf(config.url) == -1) {
         // 在请求先展示加载框
         loading = Toast.loading({
             message: '加载中...',
@@ -35,7 +35,7 @@ service.interceptors.request.use(config => {
         });
     }
 
-const token = localStorage.getItem('token')
+    const token = localStorage.getItem('token')
     if (token) {
         config.headers['x-auth-token'] = token
     }
@@ -130,11 +130,12 @@ service.interceptors.response.use(response => {
         case 401:
             console.log('跳转登录页')
             // 跳转登录页
-            Message({
+            Toast.loading({
                 message: '登录已过期，请重新登录',
-                type: 'error',
-                customClass: "message-error",
-            })
+                forbidClick: true,
+                loadingType: 'circular',
+                duration: 1000
+            });
             router.replace({
                 path: '/login',
                 query: {
@@ -145,11 +146,12 @@ service.interceptors.response.use(response => {
         // 403: token过期
         case 403:
             // 弹出错误信息
-            Message({
-                type: 'error',
+            Toast.loading({
                 message: '登录信息过期，请重新登录',
-                customClass: "message-error",
-            })
+                forbidClick: true,
+                loadingType: 'circular',
+                duration: 1000
+            });
             // 清除token
             localStorage.removeItem('token')
             // 跳转登录页面，并将要浏览的页面fullPath传过去，登录成功后跳转需要访问的页面
@@ -164,19 +166,21 @@ service.interceptors.response.use(response => {
             break
         // 404请求不存在
         case 404:
-            Message({
+            Toast.loading({
                 message: '网络请求不存在',
-                type: 'error',
-                customClass: "message-error",
-            })
+                forbidClick: true,
+                loadingType: 'circular',
+                duration: 1000
+            });
             break
         // 其他错误，直接抛出错误提示
         default:
-            Message({
+            Toast.loading({
                 message: error.response.data.message,
-                type: 'error',
-                customClass: "message-error",
-            })
+                forbidClick: true,
+                loadingType: 'circular',
+                duration: 1000
+            });
     }
     return Promise.reject(error)
 })
