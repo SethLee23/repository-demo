@@ -9,7 +9,8 @@
     "new:comp": "node ./scripts/generateComponent",
     "new:view": "node ./scripts/generateView",
     "commit": "git-cz",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
     "axios": "^0.19.2",

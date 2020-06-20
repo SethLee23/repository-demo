@@ -1,20 +1,21 @@
+/* eslint-disable global-require */
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
 
   {
     path: '/',
     name: 'homepage',
-    component: resolve => require(["../views/Home"], resolve)
-  }
-]
+    // eslint-disable-next-line import/no-dynamic-require
+    component: (resolve) => require(['../views/Home'], resolve),
+  },
+];
 
 const router = new VueRouter({
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
