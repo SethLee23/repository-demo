@@ -5,13 +5,13 @@
  * @LastEditors: your name
  * @Description: In User Settings Edit
  * @FilePath: \src\store\kim\mutations.js
- */ 
-import { Message } from 'element-ui'
-const mutations = {
-    setTestNum(state, val) {
-        state.testNum = val;
-        console.log('testNum in kim changed!now is ', state.testNum);
-    }
+ */
 
-}
-export default mutations
+import { Message } from "element-ui";
+const mutations = {
+  setTestNum(state, val) {
+    state.testNum = val;
+    console.log("testNum in kim changed!now is ", state.testNum);
+  }
+};
+export default mutations;

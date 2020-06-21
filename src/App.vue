@@ -45,12 +45,10 @@ export default {
       } else if (u.indexOf("Windows Phone") > -1) {
         localStorage.setItem("platform", "WP");
       }
-    },
+    }
   },
-  created() {
-  },
-  mounted() {
-  }
+  created() {},
+  mounted() {}
 };
 </script>
 

@@ -6,6 +6,6 @@
  * @Description: In User Settings Edit
  * @FilePath: \dyd\src\components\global\Empty\index.js
  */
-import Main from './main.vue';
+import Main from "./main.vue";
 
 export default Main;

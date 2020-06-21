@@ -5,12 +5,13 @@
  * @LastEditors: your name
  * @Description: In User Settings Edit
  * @FilePath: \src\store\kim\getters.js
- */ 
-const getters = {
-    //学习用
-    getTestNum: (state, getters, rootState, rootGetters) => {
-        return state.testNum;
-    },
-}
+ */
 
-export default getters
+const getters = {
+  //学习用
+  getTestNum: (state, getters, rootState, rootGetters) => {
+    return state.testNum;
+  }
+};
+
+export default getters;

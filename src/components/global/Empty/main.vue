@@ -2,11 +2,11 @@
   <div class="Empty">
     <div class="empty text-center">
       <!-- <img src="../../../assets/images/empty/empty01.png" /> -->
-      <p class="ft-26 color-b6b6b6">{{title}}</p>
+      <p class="ft-26 color-b6b6b6">{{ title }}</p>
     </div>
   </div>
 </template>
-  <script>
+<script>
 export default {
   name: "Empty",
   props: {
@@ -17,15 +17,14 @@ export default {
   }
 };
 </script>
-  <style lang="less" scoped>
+<style lang="less" scoped>
 .Empty {
   .empty {
     padding-top: 0.3rem;
-   img {
+    img {
       width: 3rem;
       // height: 40vw;
-   }
+    }
   }
 }
 </style>
-  

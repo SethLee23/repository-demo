@@ -7,15 +7,13 @@
  * @Description: In User Settings Edit
  * @FilePath: \src\store\kim\actions.js
  */
-import $api from '../../api/api';
-import router from '../../router/index';
+import $api from "../../api/api";
+import router from "../../router/index";
 
 const actions = {
-
   // 学习用
   changeTestNum(context, num) {
-    context.commit('setTestNum', num);
-  },
-
+    context.commit("setTestNum", num);
+  }
 };
 export default actions;

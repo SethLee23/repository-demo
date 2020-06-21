@@ -13,13 +13,13 @@ const {
   mapMutations,
   mapGetters
 } = createNamespacedHelpers("main");
-import cookie from '@/utils/cookie'
+import cookie from "@/utils/cookie";
 const mixin = {
   data() {
     return {
-      user:{
-        'userGray': require('../static/image-li/live/ren-black.png'),
-        'userRed': require('../static/image-li/live/ren-red.png'),
+      user: {
+        userGray: require("../static/image-li/live/ren-black.png"),
+        userRed: require("../static/image-li/live/ren-red.png")
       },
       dialoguePop: {
         0: {
@@ -31,7 +31,7 @@ const mixin = {
           message: "您还未登录，立即登录？"
         }
       }
-    }
+    };
   },
   computed: {
     ...mapState({
@@ -42,18 +42,18 @@ const mixin = {
   },
   methods: {
     ...mapMutations({
-      'setAccount': 'account/setAccount',
-      'setToken': 'account/setToken',
-      'LOGOUT': 'account/LOGOUT',
-      'setLoginInfo': "kim/setLoginInfo"
+      setAccount: "account/setAccount",
+      setToken: "account/setToken",
+      LOGOUT: "account/LOGOUT",
+      setLoginInfo: "kim/setLoginInfo"
     }),
     ...mapActions({
-      'kimLoginOut': 'kim/kimLoginOut'
+      kimLoginOut: "kim/kimLoginOut"
     }),
 
     showToast() {
       let { isLogin, dialoguePop } = this;
-      let that = this
+      let that = this;
       let dialogueInfo = isLogin ? dialoguePop[0] : dialoguePop[1];
       this.$dialog
         .confirm({
@@ -63,26 +63,25 @@ const mixin = {
         .then(() => {
           // on confirm
           if (isLogin) {
-            console.log(12,isLogin)
+            console.log(12, isLogin);
             // kim 登出 初始化store数据
-            that['kimLoginOut']()
-            
-            localStorage.clear()
-            that['setLoginInfo']()
+            that["kimLoginOut"]();
+
+            localStorage.clear();
+            that["setLoginInfo"]();
             // 初始化store 中 account数据
-            this['LOGOUT']();
+            this["LOGOUT"]();
             cookie.clearCookie();
           }
           this.$router.push({
             name: "login"
           });
         })
-        .catch((e) => {
-          console.log(e)
+        .catch(e => {
+          console.log(e);
           // on cancel
         });
     }
-
   }
-}
-export default mixin
+};
+export default mixin;
