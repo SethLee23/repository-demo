@@ -31,8 +31,13 @@ module.exports = {
       args[0]['process.env'].BASE_URL = JSON.stringify(process.env.BASE_URL);
       return args;
     });
-    config
-      .plugin('webpack-bundle-analyzer')
-      .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin);
+    if (process.env.NODE_ENV === 'production') {
+      if (process.env.ANALYZ_ENV) {
+        config
+          .plugin('webpack-bundle-analyzer')
+          .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin);
+      }
+    }
+
   }
 };
